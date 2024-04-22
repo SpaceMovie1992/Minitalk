@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	if (argc == 3)
 	{
 		server_pid = ft_atoi(argv[1]);
-		while (server_pid <= 0)
+		if (server_pid < 0)
 			return (1);
 		while (argv[2][i] != '\0')
 			send_signal(server_pid, argv[2][i++]);
